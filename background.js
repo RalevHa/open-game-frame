@@ -24,3 +24,13 @@ chrome.action.onClicked.addListener(async (tab) => {
     setTimeout(() => chrome.action.setBadgeText({ text: "", tabId: tab.id }), 2000);
   }
 });
+
+// right-click inside any frame -> open exactly that frame in a new tab
+chrome.runtime.onInstalled.addListener(() =>
+  chrome.contextMenus.create({ id: "open-frame", title: "Open this frame in a new tab", contexts: ["frame"] })
+);
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "open-frame" && /^https?:/.test(info.frameUrl)) {
+    chrome.tabs.create({ url: info.frameUrl, index: tab.index + 1 });
+  }
+});

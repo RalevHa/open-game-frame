@@ -17,6 +17,7 @@
     }
   },
   "background": { "service_worker": "background.js" },
-  "permissions": ["scripting"],
+  "permissions": ["scripting", "contextMenus"],
+  "commands": { "_execute_action": { "suggested_key": { "default": "Alt+O" }, "description": "Open the largest iframe in a new tab" } },
   "host_permissions": ["<all_urls>"]
 }
