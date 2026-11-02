@@ -17,7 +17,9 @@ Click the toolbar icon to open the largest embedded iframe of the current page i
 1. เปิดหน้าที่มีเกม แล้วกดให้เกมโหลดก่อน (เช่นปุ่ม **Run game** บน itch.io — iframe ถูกสร้างหลังกดปุ่ม)
 2. กดไอคอน extension
 3. แท็บใหม่จะเปิดเป็นหน้า iframe ตรง ๆ
-4. ถ้าไม่พบ iframe จะขึ้นป้าย `!` สีแดงบนไอคอนประมาณ 2 วินาที
+4. อยากเลือกเฟรมเอง: คลิกขวาในเฟรมนั้น แล้วเลือก **Open this frame in a new tab**
+5. คีย์ลัด `Alt+O` = กดไอคอน (เปลี่ยนได้ที่ `chrome://extensions/shortcuts`)
+6. ถ้าไม่พบ iframe จะขึ้นป้าย `!` สีแดงบนไอคอนประมาณ 2 วินาที
 
 ## ทำงานยังไง / How it works
 
@@ -27,7 +29,7 @@ Click the toolbar icon to open the largest embedded iframe of the current page i
 
 ## ข้อจำกัด / Limitations
 
-- เลือกเฟรมเดียว (ใหญ่สุด) ไม่มีเมนูให้เลือก
+- ไอคอน/คีย์ลัดเลือกเฟรมใหญ่สุดเฟรมเดียว (ถ้าต้องการเฟรมอื่นให้คลิกขวาเลือกเอง)
 - บางเว็บใช้ URL ที่มี token หมดอายุ หรือเช็ก referrer เปิดตรง ๆ แล้วอาจโหลดไม่ขึ้น
 - ใช้ไม่ได้บนหน้า `chrome://` และ Chrome Web Store
 - ขอสิทธิ์ `<all_urls>` เพราะต้องอ่าน URL ของ iframe ข้ามโดเมน — เหมาะกับใช้ส่วนตัวแบบ unpacked
